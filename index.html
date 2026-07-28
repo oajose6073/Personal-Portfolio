@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<!--
+  Portfolio: Olamilekan Ajose
+  Built from your resume plus the projects in your Projects folder.
+  A few things still need your input. They're marked with [[ ]].
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Olamilekan Ajose | Software Developer</title>
+<meta name="description" content="Olamilekan Ajose, software developer in Winnipeg. Live client websites, RESTful APIs in Node.js and TypeScript, and serverless systems on AWS. Applications Development and Delivery student at RRC Polytech.">
+
+<meta property="og:title" content="Olamilekan Ajose | Software Developer">
+<meta property="og:description" content="Live client websites, REST APIs, and serverless systems on AWS. Based in Winnipeg, MB.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ══════════════════ NAV ══════════════════ -->
+<header class="nav" id="nav">
+  <div class="container nav__inner">
+    <a href="#top" class="nav__brand">Olamilekan Ajose<span class="dot">.</span></a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#academic">Academic</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <!-- Save your resume as assets/resume.pdf -->
+      <a href="assets/resume.pdf" class="btn btn--sm btn--outline" target="_blank" rel="noopener">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="hero" id="top">
+  <div class="container">
+    <p class="hero__eyebrow reveal">Hello, I'm</p>
+    <h1 class="hero__name reveal">Olamilekan Ajose</h1>
+    <h2 class="hero__role reveal">
+      Software Developer <span class="sep">/</span> Full-Stack &amp; Cloud
+    </h2>
+    <p class="hero__pitch reveal">
+      I build web applications end to end: accessible front ends in HTML, CSS and
+      JavaScript, RESTful APIs in Node.js and TypeScript, and serverless systems on AWS.
+      I've shipped a live site for a paying client here in Winnipeg, and I'm completing
+      an Applications Development and Delivery diploma at RRC Polytech.
+    </p>
+
+    <div class="hero__actions reveal">
+      <a href="#work" class="btn btn--primary">View my work</a>
+      <a href="mailto:Olamilekan6073@gmail.com" class="btn btn--outline">Get in touch</a>
+    </div>
+
+    <ul class="hero__links reveal">
+      <li><a href="https://github.com/oajose6073" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/olamilekan-ajose-872a47208/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="mailto:Olamilekan6073@gmail.com">Olamilekan6073@gmail.com</a></li>
+      <li><span>Winnipeg, MB</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════════════ ABOUT ══════════════════ -->
+<section class="section" id="about">
+  <div class="container">
+    <p class="section__num">01</p>
+    <h2 class="section__title reveal">About</h2>
+
+    <div class="about">
+      <div class="about__text reveal">
+        <p>
+          I'm a software developer in Winnipeg, currently working through the
+          Applications Development and Delivery diploma at RRC Polytech. The program
+          covers the full software development life cycle, but most of what I know
+          comes from building and shipping things people actually use.
+        </p>
+        <p>
+          I designed and delivered a live website for a local appliance repair business.
+          I pitched it, closed it with a working MVP, and now maintain it on a monthly
+          care plan. To find that client I wrote a Python tool that queries the Google
+          Places API for Winnipeg businesses with no web presence. On the technical side
+          I build responsive front ends with accessibility standards applied throughout,
+          RESTful APIs with JWT authentication and role-based access control, and
+          serverless applications on AWS using Lambda, DynamoDB, API Gateway and S3.
+        </p>
+        <p>
+          I work in Agile teams, use Git and GitHub Actions for version control and
+          automated deployment, and care about writing clean, maintainable code that
+          someone else can pick up. I'm looking for
+          a co-op placement / a junior developer role
+          where I can contribute to a real product and keep learning from a strong team.
+        </p>
+      </div>
+
+      <aside class="about__facts reveal">
+        <dl>
+          <div><dt>Based in</dt><dd>Winnipeg, MB</dd></div>
+          <div><dt>Focus</dt><dd>Full-stack &amp; cloud</dd></div>
+          <div><dt>Studying</dt><dd>App Development &amp; Delivery, RRC Polytech</dd></div>
+          <div><dt>Graduating</dt><dd>May 2027</dd></div>
+          <div><dt>Open to</dt><dd>Co-op / Internship / Full-time</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ SKILLS ══════════════════ -->
+<section class="section section--alt" id="skills">
+  <div class="container">
+    <p class="section__num">02</p>
+    <h2 class="section__title reveal">Skills</h2>
+    <p class="section__lead reveal">
+      Tools and technologies I've used to build and ship the projects below.
+    </p>
+
+    <div class="skills">
+      <div class="skills__group reveal">
+        <h3>Languages</h3>
+        <ul class="tags">
+          <li>Python</li><li>JavaScript</li><li>TypeScript</li><li>SQL</li>
+        </ul>
+      </div>
+
+      <div class="skills__group reveal">
+        <h3>Web &amp; Frameworks</h3>
+        <ul class="tags">
+          <li>HTML</li><li>CSS</li><li>Node.js</li><li>Express</li>
+          <li>REST APIs</li><li>Responsive design</li><li>Accessibility (ARIA)</li>
+        </ul>
+      </div>
+
+      <div class="skills__group reveal">
+        <h3>Databases &amp; Cloud</h3>
+        <ul class="tags">
+          <li>SQL</li><li>Firebase Firestore</li><li>AWS Lambda</li>
+          <li>DynamoDB</li><li>API Gateway</li><li>S3</li>
+        </ul>
+      </div>
+
+      <div class="skills__group reveal">
+        <h3>Tools &amp; Practices</h3>
+        <ul class="tags">
+          <li>Git</li><li>GitHub</li><li>GitHub Actions</li><li>CI/CD</li>
+          <li>GitHub Pages</li><li>Postman</li><li>VS Code</li>
+          <li>Swagger / OpenAPI</li><li>Agile</li>
+        </ul>
+      </div>
+
+      <div class="skills__group reveal">
+        <h3>Concepts</h3>
+        <ul class="tags">
+          <li>Object-oriented design</li><li>Design patterns</li>
+          <li>JWT authentication</li><li>Role-based access control</li>
+          <li>Schema validation</li><li>Third-party API integration</li>
+        </ul>
+      </div>
+
+      <div class="skills__group reveal">
+        <h3>Operating Systems</h3>
+        <ul class="tags">
+          <li>Windows</li><li>Linux</li><li>macOS</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ CLIENT & PERSONAL WORK ══════════════════ -->
+<section class="section" id="work">
+  <div class="container">
+    <p class="section__num">03</p>
+    <h2 class="section__title reveal">Client &amp; Personal Work</h2>
+    <p class="section__lead reveal">
+      Sites and tools I've built outside of coursework, including one paying client.
+    </p>
+
+    <div class="projects">
+
+      <!-- ── RG Prado ── -->
+      <article class="card card--feature reveal">
+        <div class="card__head">
+          <h3 class="card__title">RG Prado Appliance Service <span class="pill">Live</span></h3>
+          <span class="card__year">2026</span>
+        </div>
+        <p class="card__badge">Client project · Design, build &amp; ongoing maintenance</p>
+        <p class="card__desc">
+          A lead-generating website for an owner-operated appliance repair business
+          serving Winnipeg to West St. Paul. The client had been relying on word of mouth
+          and a template site that buried his phone number. The brief was to turn
+          "appliance repair Winnipeg" panic-searches into phone calls.
+        </p>
+        <ul class="card__role">
+          <li><strong>Role:</strong> Sole developer and designer. I pitched the project,
+              closed the client with a working MVP at the first meeting, and delivered
+              two rounds of revisions</li>
+          <li><strong>Built:</strong> An interactive SVG stove-dial diagnostic in the hero,
+              a 19-photo auto-advancing slideshow with crossfades and blur-fill backdrops,
+              and a lead-capture form wired to Formspree with dynamic email subjects, a
+              honeypot spam trap and a phone fallback if delivery fails</li>
+          <li><strong>Decisions:</strong> Vanilla HTML, CSS and JavaScript with no
+              frameworks and no build step, keeping the whole site under 40 KB so it
+              loads instantly on mobile data. Design tokens in CSS custom properties,
+              data-driven config arrays, progressive enhancement, and
+              <code>prefers-reduced-motion</code> respected across every animation</li>
+          <li><strong>Shipped:</strong> Deployed to GitHub Pages on a custom domain with
+              Cloudflare Web Analytics, on a build fee plus monthly care plan</li>
+        </ul>
+        <ul class="tags tags--sm">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>SVG</li>
+          <li>Formspree</li><li>GitHub Pages</li><li>Accessibility</li>
+        </ul>
+        <div class="card__links">
+          <a href="https://rgpradoappliance.ca" target="_blank" rel="noopener">Live site →</a>
+          <a href="https://github.com/oajose6073/rgprado-appliance-site" target="_blank" rel="noopener">Code →</a>
+        </div>
+      </article>
+
+      <!-- ── Prospect Finder ── -->
+      <article class="card reveal">
+        <div class="card__head">
+          <h3 class="card__title">Prospect Finder</h3>
+          <span class="card__year">2026</span>
+        </div>
+        <p class="card__badge">Python tool · Google Places API</p>
+        <p class="card__desc">
+          A command-line tool that finds Winnipeg businesses with no website, or only a
+          Facebook page, and exports them to a spreadsheet. I wrote it to build my own
+          freelance pipeline, and it's how I found my first client.
+        </p>
+        <ul class="card__role">
+          <li><strong>Built:</strong> Queries the Google Places API across 11 service
+              categories and 6 Winnipeg neighbourhoods, classifies each result by web
+              presence, and writes a clean CSV with contact details, ratings and review
+              counts</li>
+          <li><strong>Decisions:</strong> Used a Places field mask to request only the
+              fields needed, keeping the tool inside the free monthly API allowance, and
+              paced requests to stay within rate limits</li>
+          <li><strong>Result:</strong> A qualified prospect list of 126 local businesses</li>
+        </ul>
+        <ul class="tags tags--sm">
+          <li>Python</li><li>Google Places API</li><li>REST</li><li>CSV</li>
+        </ul>
+        <div class="card__links">
+          <a href="[[repo link: read my note about the API key first]]" target="_blank" rel="noopener">Code →</a>
+        </div>
+      </article>
+
+      <!-- ── GracePlace ── -->
+      <article class="card reveal">
+        <div class="card__head">
+          <h3 class="card__title">GracePlace Winnipeg</h3>
+          <span class="card__year">2026</span>
+        </div>
+        <p class="card__badge">Multi-page site · CI/CD pipeline</p>
+        <p class="card__desc">
+          A multi-page website for a Winnipeg church, covering the main site, an online
+          giving page, and a ride request service for members who need transport to
+          services.
+        </p>
+        <ul class="card__role">
+          <li><strong>Built:</strong> A ride request form with field-level validation,
+              inline error states, custom radio controls and a success view, plus a
+              giving page and a slideshow-driven home page</li>
+          <li><strong>Decisions:</strong> Set up a GitHub Actions workflow that generates
+              the runtime config from repository secrets at deploy time and publishes to
+              GitHub Pages, so API keys never live in the repository</li>
+        </ul>
+        <ul class="tags tags--sm">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li>
+          <li>GitHub Actions</li><li>CI/CD</li><li>YouTube Data API</li>
+        </ul>
+        <div class="card__links">
+          <a href="https://github.com/oajose6073/GracePlace-Winnipeg" target="_blank" rel="noopener">Code →</a>
+          <a href=" https://oajose6073.github.io/GracePlace-Winnipeg-Website/" target="_blank" rel="noopener">Live site →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ ACADEMIC PROJECTS ══════════════════ -->
+<section class="section section--alt" id="academic">
+  <div class="container">
+    <p class="section__num">04</p>
+    <h2 class="section__title reveal">Academic Projects</h2>
+    <p class="section__lead reveal">
+      Coursework from the Applications Development and Delivery program at RRC Polytech.
+    </p>
+
+    <div class="projects">
+
+      <!-- ── Traffic Offence API ── -->
+      <article class="card reveal">
+        <div class="card__head">
+          <h3 class="card__title">Traffic Offence API</h3>
+          <span class="card__year">Apr 2026</span>
+        </div>
+        <p class="card__badge">Capstone · Back-End Development</p>
+        <p class="card__desc">
+          A team-built RESTful API for managing traffic tickets, payments and appeals,
+          with consistent validation and response handling across every endpoint. Built
+          with Node.js, Express and TypeScript on Firebase Firestore.
+        </p>
+        <ul class="card__role">
+          <li><strong>Role:</strong> Team project. I owned the payments module end to end</li>
+          <li><strong>Built:</strong> Full CRUD routes (GET, POST, PUT, DELETE), Joi schema
+              validation, JWT authentication middleware and role-based access control</li>
+          <li><strong>Also:</strong> Documented every payment endpoint with OpenAPI and
+              Swagger annotations for auto-generated interactive API docs</li>
+        </ul>
+        <ul class="tags tags--sm">
+          <li>Node.js</li><li>Express</li><li>TypeScript</li>
+          <li>Firestore</li><li>JWT</li><li>Joi</li><li>Swagger</li>
+        </ul>
+        <div class="card__links">
+          <a href="[[repo link]]" target="_blank" rel="noopener">Code →</a>
+        </div>
+      </article>
+
+      <!-- ── Inventory App ── -->
+      <article class="card reveal">
+        <div class="card__head">
+          <h3 class="card__title">Serverless Inventory App</h3>
+          <span class="card__year">Apr 2026</span>
+        </div>
+        <p class="card__badge">Cloud Infrastructure &amp; Development</p>
+        <p class="card__desc">
+          A serverless inventory system on AWS supporting full CRUD operations across
+          multiple locations, wired together from Lambda, DynamoDB, API Gateway and S3.
+        </p>
+        <ul class="card__role">
+          <li><strong>Built:</strong> DynamoDB schema with a composite key and a global
+              secondary index for efficient queries</li>
+          <li><strong>Also:</strong> Configured GitHub Actions CI/CD for automated
+              deployment and linting</li>
+        </ul>
+        <ul class="tags tags--sm">
+          <li>AWS Lambda</li><li>DynamoDB</li><li>API Gateway</li>
+          <li>S3</li><li>GitHub Actions</li><li>CI/CD</li>
+        </ul>
+        <div class="card__links">
+          <a href="[[repo link]]" target="_blank" rel="noopener">Code →</a>
+        </div>
+      </article>
+
+      <!-- ── Community Support Tracker ── -->
+      <article class="card reveal">
+        <div class="card__head">
+          <h3 class="card__title">Community Support Tracker</h3>
+          <span class="card__year">Dec 2025</span>
+        </div>
+        <p class="card__badge">Front-End Development</p>
+        <p class="card__desc">
+          A responsive web application for managing community engagement: event signups,
+          donations and volunteer tracking, built with usability and accessibility as the
+          priority.
+        </p>
+        <ul class="card__role">
+          <li><strong>Built:</strong> Event registration form and participant dashboard
+              in HTML, CSS and JavaScript, with form validation, dynamic error handling
+              and ARIA accessibility standards</li>
+          <li><strong>Also:</strong> Local-storage persistence for participant records,
+              plus real-time dashboard metrics and dynamic tables for roles and signups</li>
+          <li><strong>Result:</strong> A+ grade for both the project and the course</li>
+        </ul>
+        <ul class="tags tags--sm">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li>
+          <li>ARIA</li><li>Local Storage</li>
+        </ul>
+        <div class="card__links">
+          <a href="[[repo link]]" target="_blank" rel="noopener">Code →</a>
+        </div>
+      </article>
+
+      <!-- ── Pixell River Financial ── -->
+      <article class="card reveal">
+        <div class="card__head">
+          <h3 class="card__title">Pixell River Financial</h3>
+          <span class="card__year">Dec 2025</span>
+        </div>
+        <p class="card__badge">Intermediate Software Development</p>
+        <p class="card__desc">
+          A financial system managing multiple account types, processing transactions and
+          notifying clients of changes, built around object-oriented principles and
+          classic design patterns.
+        </p>
+        <ul class="card__role">
+          <li><strong>Built:</strong> Account class hierarchy using inheritance and
+              polymorphism, the Observer pattern for real-time notifications, and the
+              Strategy pattern for dynamic service charge calculations</li>
+          <li><strong>Also:</strong> UI components for account details and client lookup,
+              plus data utilities to load and update client and account records from CSV
+              and simulate email notifications</li>
+          <li><strong>Result:</strong> A+ grade for both the project and the course</li>
+        </ul>
+        <ul class="tags tags--sm">
+          <li>Python</li><li>OOP</li><li>Design Patterns</li>
+          <li>Unit Testing</li><li>CSV</li>
+        </ul>
+        <div class="card__links">
+          <a href="[[repo link]]" target="_blank" rel="noopener">Code →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ EXPERIENCE ══════════════════ -->
+<section class="section" id="experience">
+  <div class="container">
+    <p class="section__num">05</p>
+    <h2 class="section__title reveal">Experience</h2>
+
+    <ol class="timeline">
+      <!-- Confirm the start year below before publishing -->
+      <li class="timeline__item reveal">
+        <div class="timeline__meta">
+          <span class="timeline__date">[[2026]] – Present</span>
+        </div>
+        <div class="timeline__body">
+          <h3>Freelance Web Developer</h3>
+          <p class="timeline__org">Self-employed <span class="sep">·</span> Winnipeg, MB</p>
+          <ul>
+            <li>Design, build and maintain websites for local service businesses,
+                handling the work end to end from prospecting and pitching through
+                delivery and ongoing maintenance.</li>
+            <li>Built a Python tool on the Google Places API to identify local businesses
+                without a web presence, producing a qualified list of 126 prospects.</li>
+            <li>Closed a client with a working MVP at the first meeting, and now deliver
+                on a build fee plus monthly care plan covering hosting, updates and form
+                monitoring.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="timeline__item reveal">
+        <div class="timeline__meta">
+          <span class="timeline__date">Dec 2021 – Jul 2024</span>
+        </div>
+        <div class="timeline__body">
+          <h3>Office Administrator</h3>
+          <p class="timeline__org">Immanuel Fellowship Church <span class="sep">·</span> Winnipeg, MB</p>
+          <ul>
+            <li>Managed communications, scheduling and meeting logistics for church
+                leadership, building the organization and time management habits that
+                carry into Agile team environments.</li>
+            <li>Worked with members and external service providers, developing the
+                communication and problem-solving skills that make cross-functional
+                collaboration work.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+
+    <!-- ── Education ── -->
+    <h2 class="section__title section__title--sub reveal">Education</h2>
+    <ol class="timeline">
+      <li class="timeline__item reveal">
+        <div class="timeline__meta">
+          <span class="timeline__date">Jan 2025 – May 2027</span>
+        </div>
+        <div class="timeline__body">
+          <h3>Applications Development and Delivery Diploma</h3>
+          <p class="timeline__org">RRC Polytech <span class="sep">·</span> Winnipeg, MB</p>
+          <ul>
+            <li>Covering the full software development life cycle: design, building,
+                testing, deployment and maintenance.</li>
+            <li>Hands-on experience in troubleshooting, application support and writing
+                clean, maintainable code across academic projects.</li>
+            <li>Working in Agile practices, contributing to software development and
+                technical support.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="timeline__item reveal">
+        <div class="timeline__meta">
+          <span class="timeline__date">Jan 2020 – Jan 2021</span>
+        </div>
+        <div class="timeline__body">
+          <h3>Electrical Applications</h3>
+          <p class="timeline__org">MITT <span class="sep">·</span> Winnipeg, MB</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════════════ CONTACT ══════════════════ -->
+<section class="section section--alt contact" id="contact">
+  <div class="container container--narrow">
+    <p class="section__num">06</p>
+    <h2 class="section__title reveal">Let's talk</h2>
+    <p class="contact__text reveal">
+      I'm open to [developer roles / co-op placements] in Winnipeg or remote. If you
+      think I'd be a fit for your team, send me a note. I'll get back to you quickly.
+    </p>
+    <a href="mailto:Olamilekan6073@gmail.com" class="btn btn--primary btn--lg reveal">Olamilekan6073@gmail.com</a>
+
+    <ul class="contact__links reveal">
+      <li><a href="https://github.com/oajose6073" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/olamilekan-ajose-872a47208/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="assets/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+      <li><a href="tel:+14313357253">(431) 335-7253</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© <span id="year">2026</span> Olamilekan Ajose</p>
+    <a href="#top" class="footer__top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
