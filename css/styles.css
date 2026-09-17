@@ -149,6 +149,45 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 
 /* ── Hero ── */
 .hero { padding: 130px 0 120px; }
+.hero__inner {
+  display: grid; grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 4rem; align-items: center;
+}
+/* Portrait reuses the same card construction as .about__facts
+   (alt surface + hairline + radius) so the two read as one system. */
+.hero__portrait {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px;
+}
+/* The source is square, so object-fit alone can never crop it. The frame sets a
+   4:5 portrait ratio and the image is scaled inside it to land on the face. */
+.hero__shot {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 4px);
+  background: var(--bg-alt);
+}
+/* Crops to source x185-605, y70-595 - head and shoulders, eyes on the upper third. */
+.hero__shot img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transform: scale(1.524);
+  transform-origin: 47.7% 25.5%;
+}
+.hero__portrait figcaption {
+  display: flex; align-items: center; gap: .55rem;
+  margin-top: .8rem; padding-top: .8rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--mono); font-size: .72rem;
+  text-transform: uppercase; letter-spacing: .1em;
+  color: var(--text-mute);
+}
+.hero__portrait figcaption::before {
+  content: ''; flex: none;
+  width: 6px; height: 6px; border-radius: 50%; background: var(--accent);
+}
 .hero__eyebrow {
   font-family: var(--mono); font-size: .9rem; color: var(--accent); margin-bottom: 1rem;
 }
@@ -345,6 +384,8 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 
 /* ── Responsive ── */
 @media (max-width: 860px) {
+  /* Still side by side here - only the portrait column narrows. */
+  .hero__inner { grid-template-columns: minmax(0, 1fr) 200px; gap: 2.5rem; }
   .about { grid-template-columns: 1fr; gap: 2rem; }
   .timeline__item { grid-template-columns: 1fr; gap: .5rem; }
   .timeline__date { padding-top: 0; }
@@ -371,6 +412,17 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 
   .projects { grid-template-columns: 1fr; }
   .hero__links { gap: 1rem 1.25rem; }
+
+  /* Below 700 the card turns on its side: photo left, status right. */
+  .hero__inner { grid-template-columns: 1fr; gap: 2.25rem; }
+  .hero__portrait {
+    order: -1; justify-self: start;
+    display: grid; grid-template-columns: 76px 1fr;
+    gap: .9rem; align-items: center;
+  }
+  .hero__portrait figcaption {
+    margin-top: 0; padding-top: 0; border-top: none;
+  }
 }
 
 /* ── Print (so it prints like a clean CV) ── */
@@ -379,6 +431,9 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   .reveal { opacity: 1 !important; transform: none !important; }
   .section { padding: 24px 0; break-inside: avoid; }
   .card, .timeline__item { break-inside: avoid; }
+  .hero__inner { grid-template-columns: 1fr 120px; gap: 1.5rem; }
+  .hero__portrait { background: none; border: none; padding: 0; }
+  .hero__portrait figcaption { display: none; }
   body { font-size: 11pt; }
   a { color: var(--text); }
 }
