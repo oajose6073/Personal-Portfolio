@@ -24,7 +24,7 @@
 <!-- ══════════════════ NAV ══════════════════ -->
 <header class="nav" id="nav">
   <div class="container nav__inner">
-    <a href="#top" class="nav__brand">Olamilekan Ajose | 0425205<span class="dot">.</span></a>
+    <a href="#top" class="nav__brand">Olamilekan Ajose<span class="dot"></span></a>
 
     <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -238,6 +238,7 @@
         </ul>
         <div class="card__links">
           <a href="https://github.com/oajose6073/rgprado-appliance-site" target="_blank" rel="noopener">Code →</a>
+          <a href="https://rgpradoappliance.ca/" target="_blank" rel="noopener">Live site →</a>
         </div>
       </article>
 
@@ -312,6 +313,42 @@
     </p>
 
     <div class="projects">
+
+      <!-- ── Video Game Community Platform ── -->
+      <article class="card reveal">
+        <div class="card__head">
+          <h3 class="card__title">Video Game Community Platform</h3>
+          <span class="card__year">In progress</span>
+        </div>
+        <p class="card__badge">Team Project · Full-Stack Development</p>
+        <p class="card__desc">
+          A React and TypeScript platform where players browse games, post about them and
+          track favourites, built by a team of three in sprints against user stories. I own
+          the games list: the catalogue users filter, add to and favourite from.
+        </p>
+        <ul class="card__role">
+          <li><strong>Role:</strong> Team project. I own the games list feature end to end,
+              from its data model up to the UI</li>
+          <li><strong>Built:</strong> A genre-filtered catalogue on a responsive card grid,
+              with add and remove actions in React state. Each card carries a genre-coded
+              cover, platform badges, a formatted release date and a favourite toggle,
+              labelled for screen readers</li>
+          <li><strong>Also:</strong> A modal form for adding a game, with per-field
+              validation and inline error messages typed against a shared error model</li>
+          <li><strong>Decisions:</strong> Derived the platform and genre union types from
+              <code>as const</code> arrays so filter buttons, form options and stored data
+              cannot drift apart, and lifted favourites state to a shared parent so a
+              teammate's favourites page reads the same source of truth</li>
+        </ul>
+        <ul class="tags tags--sm">
+          <li>React</li><li>TypeScript</li><li>Vite</li>
+          <li>Tailwind CSS</li><li>daisyUI</li><li>React Router</li>
+        </ul>
+        <div class="card__links">
+          <a href="https://github.com/allnats/comp-4002-project" target="_blank" rel="noopener">Code →</a>
+          <a href="https://comp-4002-project-git-dev-allnats-projects.vercel.app/" target="_blank" rel="noopener">Live site →</a>
+        </div>
+      </article>
 
       <!-- ── Traffic Offence API ── -->
       <article class="card reveal">
