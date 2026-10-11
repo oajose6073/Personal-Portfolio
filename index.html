@@ -108,6 +108,9 @@
           I build responsive front ends with accessibility standards applied throughout,
           RESTful APIs with JWT authentication and role-based access control, and
           serverless applications on AWS using Lambda, DynamoDB, API Gateway and S3.
+          More recently I built and shipped GracePlace Words, a members-only app that
+          records and transcribes prophetic words given in church meetings, with pastoral
+          review before anything is published.
         </p>
         <p>
           I work in Agile teams, use Git and GitHub Actions for version control and
@@ -151,7 +154,7 @@
       <div class="skills__group reveal">
         <h3>Front End</h3>
         <ul class="tags">
-          <li>React</li><li>React Router</li><li>Tailwind CSS</li>
+          <li>React</li><li>React Router</li><li>Next.js</li><li>Tailwind CSS</li>
           <li>HTML</li><li>CSS</li><li>Responsive design</li>
           <li>Accessibility (ARIA)</li>
         </ul>
@@ -169,6 +172,7 @@
         <ul class="tags">
           <li>Firebase Firestore</li><li>AWS Lambda</li>
           <li>DynamoDB</li><li>API Gateway</li><li>S3</li><li>Vercel</li>
+          <li>Postgres</li><li>Supabase</li><li>Row-Level Security</li>
         </ul>
       </div>
 
@@ -187,6 +191,8 @@
           <li>Object-oriented design</li><li>Design patterns</li>
           <li>JWT authentication</li><li>Role-based access control</li>
           <li>Schema validation</li><li>Third-party API integration</li>
+          <li>OAuth</li><li>Audio processing</li>
+          <li>Email infrastructure (DKIM/SPF/DMARC)</li>
         </ul>
       </div>
 
@@ -210,6 +216,52 @@
     </p>
 
     <div class="projects">
+
+      <!-- ── GracePlace Words ── -->
+      <article class="card card--feature reveal">
+        <div class="card__head">
+          <h3 class="card__title">GracePlace Words <span class="pill">Live</span></h3>
+          <span class="card__year">2026</span>
+        </div>
+        <p class="card__badge">Sole developer · Requirements, architecture, data model, testing, deployment</p>
+        <p class="card__desc">
+          A members-only app for capturing the prophetic words members give one another
+          during hybrid church meetings at GracePlace Winnipeg. The previous process was
+          Otter.ai transcription pasted into a shared Google Doc, which mixed everyone's
+          words together, misattributed them, and in testing even produced summaries of
+          words that were never spoken.
+        </p>
+        <ul class="card__role">
+          <li><strong>Built:</strong> An operator console where someone taps the
+              recipient's name as each word is given, timestamped against the recording
+              and queued offline if the connection drops. A pipeline that cuts the
+              recording into one clip per word with ffmpeg and transcribes each with
+              OpenAI, using member names as spelling hints. A review queue where pastors
+              correct and approve before anything reaches members</li>
+          <li><strong>Decisions:</strong> Authorization lives in Postgres, not the UI.
+              Three roles enforced with row-level security and triggers, so an admin
+              calling the API directly still cannot delete a word, promote anyone, or
+              change their own role. Sign-in is invite-only, gated by a database trigger
+              that rejects any account not on the member list. Audio sits in a private
+              bucket behind short-lived signed URLs</li>
+          <li><strong>Privacy:</strong> Guests' words are emailed to them and then
+              permanently deleted. A full audit removed every trace afterward: database
+              rows, markers, local files, logs, exports and browser storage. Re-runs
+              cannot regenerate or re-send a guest's word</li>
+          <li><strong>Operations:</strong> Separate dev and production Supabase projects,
+              both hosted in Canada, with script guards that refuse to run against the
+              wrong one. Custom sending subdomain with DKIM, SPF and DMARC. A nightly
+              Vercel cron job purges expired guest data</li>
+        </ul>
+        <ul class="tags tags--sm">
+          <li>Next.js</li><li>TypeScript</li><li>Tailwind</li><li>Supabase</li>
+          <li>Postgres RLS</li><li>OpenAI</li><li>ffmpeg</li><li>Resend</li><li>Vercel</li>
+        </ul>
+        <div class="card__links">
+          <a href="https://words.graceplacewpg.ca" target="_blank" rel="noopener">Live site →</a>
+          <span class="card__note">(invite only)</span>
+        </div>
+      </article>
 
       <!-- ── RG Prado ── -->
       <article class="card card--feature reveal">
