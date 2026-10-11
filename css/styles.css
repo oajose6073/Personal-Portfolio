@@ -334,6 +334,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 .card__links a { color: var(--accent); transition: opacity .18s var(--ease); }
 .card__links a:hover { opacity: .65; }
+.card__note { color: var(--text-mute); font-weight: 400; margin-left: -.8rem; }
 
 /* ── Timeline ── */
 .timeline { position: relative; }
